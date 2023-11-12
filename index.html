@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/style.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/favicon/icon1.svg">
+    <script src="https://kit.fontawesome.com/63844d2341.js" crossorigin="anonymous"></script>
+    <title>Gauss | Home</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    } 
+
+    
+    </style>
+
+
+
+</head>
+<body>
+
+    <div class="topBar">
+    <i id="webName"> C A L C U L O R D S&nbsp;&nbsp;<i class="fa-solid fa-square-root-variable"></i></i> 
+    <section class="barsclass">
+        <i id="bars" class="fa-solid fa-bars"></i>
+    </section>
+    
+    </div>
+
+    <nav>
+        <button id="home"><i class="fa-solid fa-house fa-xl" ></i> Home</button>  
+        <button id="subtopic"><i class="fa-solid fa-subscript fa-xl" ></i> Subtopics <i class="fa-solid fa-caret-down" ></i></button>
+        <section class="navDropdown">
+               <button>Workds</button>
+               <button>Appeciation</button>
+               <button>Afterlife</button>
+               <button>GtaV</button>
+        </section>
+        <button><i class="fa-solid fa-person fa-xl"  ></i> Members</button>
+        <button><i class="fa-solid fa-video fa-xl" ></i> Video</button>
+        <button><i class="fa-brands fa-sourcetree fa-xl" ></i> References</button>
+        <button><i class="fa-solid fa-comment fa-xl" ></i> Comment</button>
+
+        
+    </nav>
+
+    <main class="mainParent">
+      
+    
+        <div class="contentParent">
+            <img id="frontimage" src="Images/gauss.jpg" alt="I'm GAUSS">
+            <div class="parentTitle">
+                <p id="title1">GAUSS:</p>
+                <p id="title2">The greatest Mathematician since Antiquity</p>
+            </div>
+        </div>
+
+        <div class="introduction">
+            <p id="title">Chapter 1: Introduction</p>
+
+            <p id="subcontent">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One of history's greatest mathematicians and scientists, Johann Carl Friedrich Gauss, had an extraordinary childhood that served as the foundation for his later successes. Gauss's early years were marked by an outstanding ability for mathematics and an enthusiasm for learning. He was born on April 30, 1777, in Brunswick, a city in the Duchy of Brunswick-Wolfenbüttel, which is today a part of Germany.
+            </p>
+
+            <p id="subcontent">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In a modest working-class family, Gauss was born in the latter half of the eighteenth century. His father, Gebhard Dietrich Gauss, was a mason. Gebhard Dietrich Gauss was born on February 13, 1744, and assisted his father in business in Brunswick, Germany. Gauss worked as a sales assistant, butcher, bricklayer, gardener, treasurer, and treasurer for a nearby insurance company, among other jobs, to make ends meet. There was always a shortage of money. On April 28, 1768, he married Dorothea Emerenzia Warnecken Sollerieh, and to this marriage was born one son, Johann George Heinrich, on January 14, 1769. The mother died on September 5, 1775, aged thirty (30) years. Gauss’s father had a previous marriage that ended, and Georg was his older half-brother from the first marriage. Gebhard Dietrich married Dorothea Bentze, the daughter of Christopher Bentze, a stone mason, on April 25, 1776, in Velpke, a small village near Brunswick. She was born on April 21, 1755. Their only child, Carl Friedrich Gauss, was born on April 30, 1777. His mother, Dorothea Benze, was a housewife. Gauss’s mother was illiterate, having worked as a housemaid before getting married and never having received any formal education. The birthplace of Carl Friedrich Gauss was a small house in a street called “Wendengraben”. Later, the address of the house was changed to “Wilhelmstrasse 30.”
+
+            </p>
+
+            <p id="subcontent">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dorothea Gauss lived to the age of ninety-seven (97) and spent the last twenty-two (22) years of her life under the loving care of her son at the Gottingen observatory. Gauss and his father never had any quarrels, but in his home, Gebhard Dietrich was often dominating and uncouth. He died on April 14, 1808. On April 18, 1839, Frau Dorothea Gauss, the mother of Carl Friedrich, died. She had always been very proud of her only son, and he showed the greatest affection for her. She had become blind several years before her death, but this did not stop her usual activity.
+            </p>
+        </div>
+    
+    </main>
+   
+
+    
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+
+
+$(document).ready(function(){
+
+    $(".navDropdown").hide();
+
+  $("#subtopic").click(function(){
+    $(".navDropdown").fadeToggle("fast");
+
+  });
+
+  $("#bars").click(function(){
+    $("nav").fadeToggle("fast");
+
+  });
+
+    
+
+
+
+});
+
+
+</script>
+
+</html>
