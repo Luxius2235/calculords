@@ -99,6 +99,22 @@ $(document).ready(function(){
   });
 
     
+  function checkWidth() {
+    var element = $('nav');
+    if ($(window).width() < 600) {
+      element.css('display', 'none');
+    } else {
+      element.css('display', 'flex'); // or 'inline', 'inline-block', etc., based on your needs
+    }
+  }
+
+  // Initial check when the page loads
+  checkWidth();
+
+  // Add event listener for window resize
+  $(window).resize(checkWidth);
+
+    
 
 
 
