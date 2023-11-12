@@ -36,15 +36,14 @@ nav{
     height: 100%;
     position: fixed;
     display: flex;
-    gap:3rem;
     flex-direction: column;
     padding-top: 4rem;
-    overflow: auto;
+
     box-shadow: rgba(60, 64, 67, 0.3) 2px 0px, rgba(60, 64, 67, 0.15) 5px 5px;
 }
 
 nav>button{
-    height: 3rem;   
+    height: 5rem;   
     padding-left: 2rem;
     text-align: left;
     font-size: large;
@@ -55,6 +54,20 @@ nav>button{
     color: gray;
     
 }
+
+.subtopicclass {
+    color: orange;
+    transition: 0.4s;   
+    background-color: black;
+    border-bottom: solid rgb(86, 86, 86) 5px;
+    
+}
+
+.addclass{
+    color: orange;
+}
+
+
 
 
 nav>button:hover{
@@ -68,7 +81,6 @@ nav>button:hover{
     
     display: flex;
     flex-direction: column;
-    margin-top: -3rem;
     padding-top: 0.5rem;
 
     
@@ -78,8 +90,8 @@ nav>button:hover{
     background: none;
     border: none;
     cursor: pointer;
-    font-size: larger; 
-    height: 2rem;
+    font-size: medium; 
+    height: 3rem;
     color: gray;
 
 }
@@ -91,6 +103,27 @@ nav>button:hover{
 
 }
 
+.mathDropdown{
+    border: solid 1px gray;
+}
+
+.mathDropdown>button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: medium; 
+    height: 3rem;
+    color: gray;
+}
+
+.mathDropdown>button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.4s;
+}
+
+
+
 
 
 #home {
@@ -98,6 +131,9 @@ nav>button:hover{
     color: white;
     border-bottom: solid rgb(86, 86, 86) 5px;
 }
+
+
+
 
 
 
@@ -159,6 +195,23 @@ nav>button:hover{
     text-align: justify;
     line-height:150%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width:1000px) 
     {
@@ -272,11 +325,20 @@ nav>button:hover{
             height: 100%;
             position: fixed;
             display: flex;
-            gap:3rem;
             flex-direction: column;
             padding-top: 5rem;
             box-shadow: rgba(60, 64, 67, 0.3) 2px 0px, rgba(60, 64, 67, 0.15) 5px 5px;
         }
+
+        nav>button{
+            height: 4rem;   
+            
+        }
+
+        .navDropdown{
+            margin-top: 0.2rem;
+        }
+
 
 
 
