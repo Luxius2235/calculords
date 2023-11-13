@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/top-nav-dark.css" rel="stylesheet">
+    <link href="style/comment.css" rel="stylesheet">
+    <link href="style/login-signup.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/favicon/icon1.svg">
+    <script src="https://kit.fontawesome.com/63844d2341.js" crossorigin="anonymous"></script>
+    <title>Gauss | Home</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    } 
+    </style>
+
+    <div class="topBar">
+        <i id="webName">C A L C U L O R D S&nbsp;&nbsp;<i class="fa-solid fa-square-root-variable"></i></i> 
+        <section class="barsclass">
+            <i id="bars" class="fa-solid fa-bars"></i>
+        </section>
+    </div>
+
+    <nav>
+
+       <ul>
+        <li onclick="location.href='index.html'"><i class="fa-solid fa-house fa-xl" ></i> Home</li>
+        <li><i class="fa-solid fa-person fa-xl"  ></i> Members</li>
+        <li><i class="fa-solid fa-video fa-xl" ></i> Video</li>
+        <li><i class="fa-brands fa-sourcetree fa-xl" ></i> References</li>
+        <li id="comments"><i class="fa-solid fa-comment fa-xl" ></i> Comment</li>
+       </ul>
+    </nav>
+
+    <main class="mainParent">
+
+
+      <div class="texttop">
+        <p id="texttop"></p></p>
+      </div>
+
+   
+    
+
+    <div class="containersign saynap"> 
+
+      <h1>C A L C U L O R D S&nbsp;&nbsp;<i class="fa-solid fa-square-root-variable"></i></h1>
+
+      <form class="signup" autocomplete="on">
+
+        <section class="namecont siksyon">
+            <span>Enter Name</span>
+            <input id="first" name="first" placeholder="First Name">
+            <input id="last" name="last" placeholder="Last Name">
+        </section>
+          
+
+          <section class="siksyon">
+              <span>Email</span>
+              <input id="email" type="email" name="email" placeholder="Enter Email">
+          </section>
+          
+          <section class="siksyon"> 
+              <span>Password</span>
+              <input id="pass" type="password" name="pass" placeholder="Enter Password">
+          </section>
+
+          <button type="submit" class="submit" style="align-self: center; width: 100%;">Log in</button>
+      </form>
+
+      <br>
+      <section>
+
+       <p class="ques">Don't have an account? <a class="anchor log">Login here. </a></p>
+      <span class='Error'>Wrong input, please try again.</span>
+        
+
+
+
+
+       
+       
+
+      </section>
+  </div>
+
+  <div class="containersign lagin"> 
+
+    <h1>C A L C U L O R D S&nbsp;&nbsp;<i class="fa-solid fa-square-root-variable"></i></h1>
+
+    <form class="signup" autocomplete="on">
+
+      
+        
+
+        <section class="siksyon">
+            <span>Email</span>
+            <input id="email" type="email" name="email" placeholder="Enter Email">
+        </section>
+        
+        <section class="siksyon">
+            <span>Password</span>
+            <input id="pass" type="password" name="pass" placeholder="Enter Password">
+        </section>
+
+        <button type="submit" class="submit" style="align-self: center; width: 100%;">Log in</button>
+    </form>
+
+    <br>
+    <section>
+
+     <p class="ques">Don't have an account? <a class="anchor reg">Register here. </a></p>
+    <span class='Error'>Wrong input, please try again.</span>
+      
+
+
+
+
+     
+     
+
+    </section>
+</div>
+
+
+</main>
+
+
+
+
+</head>
+<body>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+  $("#texttop").text("Want to say something?");
+
+  $(".saynap").hide();
+}); 
+
+$(".reg").click(function(){
+    $(".saynap").show();
+    $(".lagin").hide();
+    $("#texttop").text("Poor thing.. you must be new here.");
+  });
+
+$(".log").click(function(){
+    $(".lagin").show();
+    $(".saynap").hide();
+    $("#texttop").text("Liar");
+  });
+
+</script>
+
+
+
+<script>
+
+
+$(document).ready(function(){
+
+    
+    $(".mathDropdown").hide();
+
+    $(".navDropdown").hide();
+
+  $("#subtopic").click(function(){
+    $(".navDropdown").fadeToggle("fast");
+    $(this).toggleClass('subtopicclass');
+  });
+
+
+  $("#chap4").click(function(){
+    $(".mathDropdown").fadeToggle("fast");
+    var currentColor = $(this).css("color");
+
+    // Toggle between default color and orange
+    var newColor = (currentColor === "rgb(255, 165, 0)") ? "" : "orange";
+    
+    // Apply the new color
+    $(this).css("color", newColor);
+
+  });
+
+  $("#bars").click(function(){
+    $("nav").fadeToggle("fast");
+
+  });
+
+
+  
+
+
+  function checkWidth() {
+    var element = $('nav');
+    if ($(window).width() < 670) {
+      element.hide();   
+      
+      
+  
+
+    } else {
+      element.css('display', 'flex'); // or 'inline', 'inline-block', etc., based on your needs
+ 
+
+
+    }
+  }
+
+  // Initial check when the page loads
+  checkWidth();
+
+  // Add event listener for window resize
+  $(window).resize(checkWidth);
+});
+
+</script>
+
+
+</html>
