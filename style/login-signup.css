@@ -2,6 +2,10 @@ body{
     background-color: #121212;
 }
 
+h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .mainParent{
     padding-top: 5rem;
 }

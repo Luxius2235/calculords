@@ -47,7 +47,7 @@
 
     <div class="containersign saynap"> 
 
-      <h1>C A L C U L O R D S&nbsp;&nbsp;<i class="fa-solid fa-square-root-variable"></i></h1>
+      <h1 class="login-name">C A L C U L O R D S&nbsp;&nbsp;<i class="fa-solid fa-square-root-variable"></i></h1>
 
       <form class="signup" autocomplete="on">
 
@@ -56,6 +56,11 @@
             <input id="first" name="first" placeholder="First Name">
             <input id="last" name="last" placeholder="Last Name">
         </section>
+        
+        <section class="siksyon">
+          <span>Username</span>
+          <input id="pass" name="username" placeholder="Enter username">
+      </section>
           
 
           <section class="siksyon">
@@ -92,10 +97,6 @@
     <h1>C A L C U L O R D S&nbsp;&nbsp;<i class="fa-solid fa-square-root-variable"></i></h1>
 
     <form class="signup" autocomplete="on">
-
-      
-        
-
         <section class="siksyon">
             <span>Email</span>
             <input id="email" type="email" name="email" placeholder="Enter Email">
@@ -114,16 +115,133 @@
 
      <p class="ques">Don't have an account? <a class="anchor reg">Register here. </a></p>
     <span class='Error'>Wrong input, please try again.</span>
-      
-
-
-
-
-     
-     
-
+    
     </section>
 </div>
+
+<main class="pinned-comment-cont">
+  <div class="reminder">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, et dignissimos. Quam illo quod nesciunt in nulla impedit dicta fugit delectus consequuntur harum ipsam facilis deserunt ab dolores, est enim?</p>
+  </div>
+
+  <section>
+    <span>Pinned Comments</span>
+  </section>
+
+
+
+<div class="user-comment-parent">
+
+      <div class="user-comment-cont">
+        <img src="Images/gauss.jpg" alt="Profile">
+        <section class="nametime-cont">
+          <i>asdasdasdasdasdasd</i>
+          <i id="time">4 mins ago</i>
+        </section>
+        <i class="fa-solid fa-thumbtack pinned"></i>
+        <i class="fa-solid fa-trash ellipsis"></i>
+      
+      </div>
+
+    <div>
+      <section class="user-comment">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quasi alias, minus amet facilis voluptatem repellendus dolorum deserunt ducimus magni, ad cumque, autem nesciunt facere aliquam voluptatibus! Voluptatum, deserunt nisi.</p>
+      </section>
+      <ul class="react-cont">
+        <li id="great"><i class="fa-solid fa-greater-than fa-xl"></i><a id="great-value"> 1000</a> </li>
+      </ul>
+    </div>
+ 
+</div>
+
+<div class="user-comment-parent">
+
+  <div class="user-comment-cont">
+    <img src="Images/gauss.jpg" alt="Profile">
+    <section class="nametime-cont">
+      <i>Mustang101</i>
+      <i id="time">4 mins ago</i>
+    </section>
+    <i class="fa-solid fa-thumbtack pinned"></i>
+    <i class="fa-solid fa-trash ellipsis"></i>
+  
+  </div>
+
+<div>
+  <section class="user-comment">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quasi alias, minus amet facilis voluptatem repellendus dolorum deserunt ducimus magni, ad cumque, autem nesciunt facere aliquam voluptatibus! Voluptatum, deserunt nisi.</p>
+  </section>
+  <ul class="react-cont">
+    <li id="great"><i class="fa-solid fa-greater-than fa-xl"></i><a id="great-value"> 1000</a> </li>
+
+  </ul>
+</div>
+
+</div>
+
+</main>
+
+
+
+<div class="input-comment-cont">
+
+  <img src="Images/gauss.jpg" alt="">
+  <textarea rows="1" cols="1" placeholder="Comment"></textarea>
+  <button><i class="fa-solid fa-paper-plane"></i></button>
+
+</div>
+
+
+<main class="user-comment-main-cont">
+
+
+  <div class="user-comment-parent">
+
+    <div class="user-comment-cont">
+      <img src="Images/gauss.jpg" alt="Profile">
+      <section class="nametime-cont">
+        <i>Mustang101</i>
+        <i id="time">4 mins ago</i>
+      </section>
+      <div class="pin-trash"> 
+        <i class="fa-solid fa-thumbtack pin"></i>
+        <i class="fa-solid fa-trash ellipsis"></i>
+      </div>
+    
+     
+    </div>
+  
+    <div>
+      <section class="user-comment">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quasi alias, minus amet facilis voluptatem repellendus dolorum deserunt ducimus magni, ad cumque, autem nesciunt facere aliquam voluptatibus! Voluptatum, deserunt nisi.</p>
+      </section>
+      <ul class="react-cont">
+        <li id="great"><i class="fa-solid fa-greater-than fa-xl"></i><a id="great-value"> 1000</a> </li>
+       
+      </ul>
+    </div>
+
+    
+  
+  </div>
+
+
+ 
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
 
 
 </main>
@@ -136,12 +254,37 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
+
+<script>
+  
+  $("#great").click(function(){
+    $(this).css("color", "orange")
+    $("#great-value").text(" 1001");
+    });
+
+    $(".ellipsis").click(function(){
+    var userChoice = confirm("Are you sure you want to delete this?");
+    if (userChoice) {
+      alert("You clicked OK!");
+    } else {
+      alert("You clicked Cancel!");
+    }
+    });
+  
+  </script>
+
 <script>
 
 $(document).ready(function(){
 
-  $("#texttop").text("Want to say something?");
+  $(".texttop").show();
+  $(".lagin").show();
 
+
+
+  $("#ellipsis-box").hide();
+
+  $("#texttop").text("Want to say something?");
   $(".saynap").hide();
 }); 
 

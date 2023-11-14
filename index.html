@@ -23,18 +23,23 @@
 </head>
 <body>
 
-    <div class="topBar">
+    <div class="topBar" id="topBar">
     <i id="webName"> C A L C U L O R D S&nbsp;&nbsp;<i class="fa-solid fa-square-root-variable"></i></i> 
+
+    <section class="option">
+        <i class="fa-solid fa-moon moon"></i>
+        <i class="fa-solid fa-highlighter highlighter"></i>
+    </section>
     <section class="barsclass">
         <i id="bars" class="fa-solid fa-bars"></i>
     </section>
     
     </div>
 
-    <nav>
+    <nav class="nav">
 
        <ul>
-        <li id="home" onclick="location.href='index.html'"><i class="fa-solid fa-house fa-xl" ></i> Home</li>
+        <li id="home" class="home-white" onclick="location.href='index.html'"><i class="fa-solid fa-house fa-xl" ></i> Home</li>
         <li id="subtopic"><i class="fa-solid fa-subscript fa-xl" ></i> Subtopics <i class="fa-solid fa-caret-down" ></i></li>
         <ul class="navDropdown">
             <li id="chap1">Introduction</li>
@@ -78,7 +83,7 @@
             <p id="title">Chapter 1: Introduction</p>
 
             <p id="subcontent">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One of history's greatest mathematicians and scientists, Johann Carl Friedrich Gauss, had an extraordinary childhood that served as the foundation for his later successes. Gauss's early years were marked by an outstanding ability for mathematics and an enthusiasm for learning. He was born on April 30, 1777, in Brunswick, a city in the Duchy of Brunswick-Wolfenbüttel, which is today a part of Germany.
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One of <a class="i">history's greatest mathematicians and scientists</a>, Johann Carl Friedrich Gauss, had an extraordinary childhood that served as the foundation for his later successes. Gauss's early years were marked by an outstanding ability for mathematics and an enthusiasm for learning. He was born on April 30, 1777, in Brunswick, a city in the Duchy of Brunswick-Wolfenbüttel, which is today a part of Germany.
             </p>
 
             <p id="subcontent">
@@ -248,6 +253,100 @@ astronomer Joseph Piazzi discovered the planetoid Ceres. However, he could only 
     
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
+<script>
+
+    $(document).ready(function(){  
+
+        $(".highlighter").click(function(){
+            $(".i").toggleClass("blue");
+            console.log("gumana");
+        });
+
+  var isMoonClicked = false;
+ 
+
+$('.moon').click(function () {
+    isMoonClicked = !isMoonClicked; // Toggle the click state
+  if (isMoonClicked) {
+
+
+    $("#topBar").toggleClass("topBar");
+            $("#topBar").toggleClass("topBar-dark");
+
+            $("nav").toggleClass("nav");
+            $("nav").toggleClass("nav-dark");
+
+            $("#home").toggleClass("home-white");
+            $("#home").toggleClass("home-dark");
+
+            $(".mainParent").toggleClass("black");
+
+
+
+
+    console.log('Moon is clicked');
+  } else {
+
+  
+
+    $("#topBar").toggleClass("topBar");
+            $("#topBar").toggleClass("topBar-dark");
+
+            $("nav").toggleClass("nav");
+            $("nav").toggleClass("nav-dark");
+
+            $("#home").toggleClass("home-white");
+            $("#home").toggleClass("home-dark");
+
+            $(".mainParent").toggleClass("black");
+
+            $(".highlighter").click(function(){
+            $(".i").toggleClass("blue");
+        });
+
+
+    console.log('Moon is not clicked');
+    // Perform actions when the moon is not clicked
+  }
+
+
+  //$('.highlighter').click(function () {
+  //if(isMoonClicked){
+  //$(".i").toggleClass("blue");
+  //console.log("Moon is clicked")
+    
+  //}
+
+  //else{
+  //$(".i").toggleClass("yellow");
+  //console.log("Moon is not clicked")
+  //}
+
+  //   });
+
+
+
+
+});
+
+
+
+
+        
+    
+
+    });
+
+
+
+
+
+
+</script>
+
+
 <script>
 
 

@@ -1,3 +1,21 @@
+.topBar-dark{
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    position: fixed;
+    background-color:#121212;
+    text-align: center;
+    color: white;
+    padding-top: 0.5rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+}    
+    
+
 .topBar {
     width: 100%;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -8,10 +26,35 @@
     position: fixed;
     background-color: white;
     text-align: center;
-
     padding-top: 0.5rem;
     height: 2rem;
+    display: flex;
+    flex-direction: row;
 }
+
+#webName{
+    margin: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: normal;
+
+}
+
+.option{
+    display: flex;
+    gap: 2rem;
+    padding-right: 1rem;
+}
+
+.option>i{
+    font-size: larger;
+    cursor: pointer;
+}
+
+.option>i:hover{
+    color: orange;
+}
+
+
 .barsclass{
     display: none;
     margin-top: 0.2rem;
@@ -20,20 +63,33 @@
 .topBar>i{
     font-style: normal;
     cursor: pointer;
+}
 
+.topBar-dark>i{
+    font-style: normal;
+    cursor: pointer;
 }
 .mainParent{
     display: flex;
     flex-direction: column;
     padding-left: 20rem;
     padding-top: 5rem;
-
-
-
+    
 }
 
-nav{
+.nav{
     background-color: white;
+    margin-top: 2.7em;
+    width: 14rem;
+    height:100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(60, 64, 67, 0.3) 2px 0px, rgba(60, 64, 67, 0.15) 5px 5px;
+}
+
+.nav-dark{
+    background-color:#121212;
     margin-top: 2.7em;
     width: 14rem;
     height:100%;
@@ -48,6 +104,8 @@ nav>ul{
     height: 95%;
 }
 
+
+
 nav>ul>li{
     height: 3rem;   
     padding-left: 2rem;
@@ -60,9 +118,22 @@ nav>ul>li{
     background: none;
     color: gray;
     border: solid 5px rgba(245, 222, 179, 0);
-
-    
 }
+
+.nav-dark>ul>li{
+    height: 3rem;   
+    padding-left: 2rem;
+    padding-top: 10%;
+    text-align: left;
+    font-size: large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: gray;
+    border: solid 5px rgba(245, 222, 179, 0);
+}
+
 
 .subtopicclass {
     color: orange;
@@ -76,7 +147,27 @@ nav>ul>li{
     color: orange;
 }
 
+.yellow{
+    background-color: yellow;
+}
 
+.black {
+    background-color: black;
+    color: white;
+}
+
+.blue{
+    background-color:#ff00ff5f;
+}
+
+
+
+nav>ul>li.hovered{
+    transition: 0.4s;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-bottom: solid rgb(164, 164, 164) 5px;
+}
 
 
 nav>ul>li:hover{
@@ -149,12 +240,17 @@ nav>ul>li:hover{
 
 
 
-#home {
+.home-white {
     background-color: black;
     color: white;
     border-bottom: solid rgb(86, 86, 86) 5px;
 }
 
+.home-dark{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-bottom: solid rgb(195, 195, 195) 5px;
+}
 
 
 
@@ -328,11 +424,37 @@ nav>ul>li:hover{
             flex-direction: row;
             justify-content: space-between;
             width: 95%;
-
             padding-top: 0rem;
             height: 2.5rem;
             
         }
+
+        .topBar-dark{
+            text-align: left;
+            padding-left: 5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 95%;
+            padding-top: 0rem;
+            height: 2.5rem;
+            
+        }
+
+        .option{
+            display: flex;
+            gap: 2rem;
+            padding-right: 2rem;
+            margin-top: 0.5rem;
+         
+        }
+        
+        .option>i{
+            font-size: larger;
+            cursor: pointer;
+        }
+        
+     
         .barsclass{
             display: block;
             right: 0;
@@ -369,6 +491,11 @@ nav>ul>li:hover{
             margin-top: 0.6rem;
             font-style: normal;
             cursor: pointer;
+        }
+
+        #webName{
+            margin-left: 0;
+            
         }
 
 
