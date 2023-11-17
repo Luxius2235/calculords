@@ -1,3 +1,4 @@
+
 .topBar-dark{
     width: 100%;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -85,7 +86,7 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    box-shadow: rgba(60, 64, 67, 0.3) 2px 0px, rgba(60, 64, 67, 0.15) 5px 5px;
+   
 }
 
 .nav-dark{
@@ -262,7 +263,10 @@ nav>ul>li:hover{
     display: flex;
     flex-direction: row;
     margin: auto;
+
+
 }
+
 
 #fronimage{
     height: 40rem;
@@ -311,52 +315,73 @@ nav>ul>li:hover{
 #subcontent{
     font-size: 1.5rem;
     font-family: serif;
-    text-align: justify;
+    text-align: left;
     line-height:150%;
 }
 
+.left {
+
+    transition: all 1.5s; /* Corrected from '2S' to '2s' */
+
+  }
+  
+  .right {
+
+   
+    transition: all 1.5s; /* Corrected from '2S' to '2s' */
+
+  }
+
+  .introduction {
+
+    transition: all 1.5s; /* Corrected from '2S' to '2s' */
+  }
+
+  .nav, .nav-dark, .topBar, .topBar-dark, .mainParent{
+    transition: all 1s; /* Corrected from '2S' to '2s' */
+  }
+
+  .navhide{
+    margin-left: -1000px;
+    transition:all 0.5s;
+  }
+
+  .navshow{
+    margin-left: 0;
+    transition:all 0.5s;
+    display: flex;
+  }
+
+  
 
 
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width:1000px) 
-    {
-        *{
-            padding: 0;
-            margin: 0;
-        }
-        #title1{
-            font-size:7rem;
-        }
-
-        .contentParent{
-            flex-direction: column;
-        }
-
-        #frontimage{
-            height: 10rem;
-            object-fit: cover;
-        }
-
-        .introduction{
-            width: 100%;
-        }
-
-
+  
+  @media screen and (max-width: 1000px) {
+    * {
+      padding: 0;
+      margin: 0;
     }
+    
+    #title1 {
+      font-size: 7rem;
+    }
+  
+    .contentParent {
+      flex-direction: column;
+    }
+  
+    #frontimage {
+      height: 10rem;
+      object-fit: cover;
+    }
+  
+    .introduction {
+      width: 100%;
+    }
+  }
+  
 
 
     @media screen and (max-width:670px) 
@@ -394,6 +419,10 @@ nav>ul>li:hover{
         .parentTitle{
             padding: 0;
             margin-top: 1rem;
+           padding: 1rem;
+
+            width: fit-content;
+            
 
         }
 
@@ -404,7 +433,7 @@ nav>ul>li:hover{
         }
 
         .introduction{
-            width: 95%;
+            width: 90%;
             padding: 0;
         
         }
@@ -414,8 +443,10 @@ nav>ul>li:hover{
         }
 
         #subcontent{
-            font-size: 1.2rem;
+            font-size: medium;
             line-height: 180%;
+            text-align: left;
+
         }
         .topBar{
             text-align: left;

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/top-nav-dark.css" rel="stylesheet">
+    <link href="style/members.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/favicon/icon1.svg">
+    <script src="https://kit.fontawesome.com/63844d2341.js" crossorigin="anonymous"></script>
+    <title>Gauss | Home</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    } 
+
+    
+    </style>
+
+<div class="topBar">
+    <i id="webName"> C A L C U L O R D S&nbsp;&nbsp;<i class="fa-solid fa-square-root-variable"></i></i> 
+    <section class="barsclass">
+        <i id="bars" class="fa-solid fa-bars"></i>
+    </section>
+    
+    </div>
+
+    <nav>
+
+       <ul>
+        <li id="home" onclick="location.href='index.html'"><i class="fa-solid fa-house fa-xl" ></i> Home</li>
+        <li><i class="fa-solid fa-video fa-xl" ></i> Video</li>
+        <li onclick="location.href='comment.html'"><i class="fa-solid fa-comment fa-xl" ></i> Comment</li>
+        <li id="members" onclick="location.href='members.html'"><i class="fa-solid fa-person fa-xl"> </i> About us</li>
+        <li><i class="fa-brands fa-sourcetree fa-xl" ></i> References</li>
+        <li><i class="fa-solid fa-right-from-bracket fa-xl"></i> Log out</li>
+       </ul>
+
+
+
+
+
+
+        
+    </nav>
+
+
+    <main class="mainParent" >
+        <span>The Members</span>
+
+    </main>
+
+
+
+
+
+
+
+</div>
+
+</head>
+<body>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+
+
+$(document).ready(function(){
+
+    
+    $(".mathDropdown").hide();
+
+    $(".navDropdown").hide();
+
+  $("#subtopic").click(function(){
+    $(".navDropdown").fadeToggle("fast");
+    $(this).toggleClass('subtopicclass');
+  });
+
+
+  $("#chap4").click(function(){
+    $(".mathDropdown").fadeToggle("fast");
+    var currentColor = $(this).css("color");
+
+    // Toggle between default color and orange
+    var newColor = (currentColor === "rgb(255, 165, 0)") ? "" : "orange";
+    
+    // Apply the new color
+    $(this).css("color", newColor);
+
+  });
+
+  $("#bars").click(function(){
+    $("nav").fadeToggle("fast");
+
+  });
+
+
+  
+
+
+  function checkWidth() {
+    var element = $('nav');
+    if ($(window).width() < 670) {
+      element.hide();   
+      
+      
+  
+
+    } else {
+      element.css('display', 'flex'); // or 'inline', 'inline-block', etc., based on your needs
+ 
+
+
+    }
+  }
+
+  // Initial check when the page loads
+  checkWidth();
+
+  // Add event listener for window resize
+  $(window).resize(checkWidth);
+});
+</script>
+
+<script>
+    const observer = new IntersectionObserver((enteries) => {enteries.forEach((entry) => {
+    console.log(entry)
+        if (entry.isIntersecting) {
+    entry.target.classList.add('show');
+    } else { 
+    entry.target.classList.remove('show');
+    }
+    });
+    });
+    
+    const hiddenElements = document.querySelectorAll('.left');
+    hiddenElements.forEach((el) => observer.observe(el));
+    
+    const hiddenElementss = document.querySelectorAll('.right');
+    hiddenElementss.forEach((el) => observer.observe(el));
+    </script>
+
+
+</html>

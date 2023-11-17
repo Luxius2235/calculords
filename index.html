@@ -54,10 +54,12 @@
             <li id="chap6">Conclusion</li>
         </ul>
      </section>
-        <li><i class="fa-solid fa-person fa-xl"  ></i> Members</li>
         <li><i class="fa-solid fa-video fa-xl" ></i> Video</li>
-        <li><i class="fa-brands fa-sourcetree fa-xl" ></i> References</li>
         <li onclick="location.href='comment.html'"><i class="fa-solid fa-comment fa-xl" ></i> Comment</li>
+        <li onclick="location.href='members.html'"><i class="fa-solid fa-person fa-xl"> </i> About us</li>
+        <li><i class="fa-brands fa-sourcetree fa-xl" ></i> References</li>
+        <li><i class="fa-solid fa-right-from-bracket fa-xl"></i> Log out</li>
+
        </ul>
 
 
@@ -72,8 +74,8 @@
       
     
         <div class="contentParent">
-            <img id="frontimage" src="Images/gauss.jpg" alt="I'm GAUSS">
-            <div class="parentTitle">
+            <img class="left" id="frontimage" src="Images/gauss.jpg" alt="I'm GAUSS">
+            <div class="parentTitle right">
                 <p id="title1">GAUSS:</p>
                 <p id="title2">The greatest Mathematician since Antiquity</p>
             </div>
@@ -259,6 +261,8 @@ astronomer Joseph Piazzi discovered the planetoid Ceres. However, he could only 
 
     $(document).ready(function(){  
 
+       
+
         $(".highlighter").click(function(){
             $(".i").toggleClass("blue");
             console.log("gumana");
@@ -357,6 +361,8 @@ $(document).ready(function(){
 
     $(".navDropdown").hide();
 
+  
+
   $("#subtopic").click(function(){
     $(".navDropdown").fadeToggle("fast");
     $(this).toggleClass('subtopicclass');
@@ -376,7 +382,13 @@ $(document).ready(function(){
   });
 
   $("#bars").click(function(){
-    $("nav").fadeToggle("fast");
+    var nav = $("nav");
+
+if (nav.hasClass("navshow")) {
+    nav.removeClass("navshow");
+} else {
+    nav.addClass("navshow");
+}
 
   });
 
@@ -387,14 +399,19 @@ $(document).ready(function(){
   function checkWidth() {
     var element = $('nav');
     if ($(window).width() < 670) {
-      element.hide();   
+      element.addClass('navhide');   
+
+      $(".mainParent").click(function(){
+        $(".nav").removeClass('navshow');
+        console.log("pogi");
+    })
       
       
   
 
     } else {
-      element.css('display', 'flex'); // or 'inline', 'inline-block', etc., based on your needs
- 
+      
+        console.log("fck u");
 
 
     }
@@ -437,7 +454,9 @@ $(document).ready(function(){
 
 });
 
-
 </script>
+
+
+
 
 </html>
