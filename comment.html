@@ -334,7 +334,13 @@ $(document).ready(function(){
   });
 
   $("#bars").click(function(){
-    $("nav").fadeToggle("fast");
+    var nav = $("nav");
+
+if (nav.hasClass("navshow")) {
+    nav.removeClass("navshow");
+} else {
+    nav.addClass("navshow");
+}
 
   });
 
@@ -345,14 +351,19 @@ $(document).ready(function(){
   function checkWidth() {
     var element = $('nav');
     if ($(window).width() < 670) {
-      element.hide();   
+      element.addClass('navhide');   
+
+      $(".mainParent").click(function(){
+        $("nav").removeClass('navshow');
+        console.log("pogi");
+    })
       
       
   
 
     } else {
-      element.css('display', 'flex'); // or 'inline', 'inline-block', etc., based on your needs
- 
+      
+        console.log("fck u");
 
 
     }

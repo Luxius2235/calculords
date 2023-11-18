@@ -18,13 +18,16 @@
     
     </style>
 
+    </head>
+    <body>
+
 <div class="topBar">
     <i id="webName"> C A L C U L O R D S&nbsp;&nbsp;<i class="fa-solid fa-square-root-variable"></i></i> 
     <section class="barsclass">
         <i id="bars" class="fa-solid fa-bars"></i>
     </section>
     
-    </div>
+  </div>
 
     <nav>
 
@@ -33,7 +36,7 @@
         <li><i class="fa-solid fa-video fa-xl" ></i> Video</li>
         <li onclick="location.href='comment.html'"><i class="fa-solid fa-comment fa-xl" ></i> Comment</li>
         <li id="members" onclick="location.href='members.html'"><i class="fa-solid fa-person fa-xl"> </i> About us</li>
-        <li><i class="fa-brands fa-sourcetree fa-xl" ></i> References</li>
+        <li onclick="location.href='references.html'"><i class="fa-brands fa-sourcetree fa-xl" ></i> References</li>
         <li><i class="fa-solid fa-right-from-bracket fa-xl"></i> Log out</li>
        </ul>
 
@@ -47,26 +50,58 @@
 
 
     <main class="mainParent" >
-        <span>The Members</span>
+        <span class="damembers">The Members</span>
+      <div class="membersMainParent">
+        <section class="membersParent">
+          <img src="Images/alfea.jpeg" alt="">
+          <span class="name">Alfea Jenica B. Aguilar</span>
+          <span class="motto">Luluhod sa munggo, wag lamang ma kwatro.Luluhod sa munggo, wag lamang ma kwatro.</span>
+        </section>
+        <section class="membersParent">
+          <img src="Images/sean.jpg" alt="">
+          <span class="name">Sean Chelsea E. Balmaceda</span>
+          <span class="motto">Luluhod sa munggo, wag lamang ma kwatro.</span>
+        </section>
+        <section class="membersParent">
+          <img src="Images/carp.jpg" alt="">
+          <span class="name">Jovelyn M. Carpentero</span>
+          <span class="motto">Luluhod sa munggo, wag lamang ma kwatro.</span>
+        </section>
+        <section class="membersParent">
+          <img src="Images/danica.jpg" alt="">
+          <span class="name">Danica Joy DC. Delos Santos</span>
+          <span class="motto">“Mathematics consists of proving the most obvious thing in the least obvious way.” <br>
+            — George Polya</span>
+        </section> 
 
+        <section class="membersParent">
+          <img src="Images/nator.png" alt="">
+          <span class="name">Marj Nathan E. Nator</span>
+          <span class="motto">Luluhod sa munggo, wag lamang ma kwatro.</span>
+        </section>
+        <section class="membersParent">
+          <img src="Images/andrei.JPG" alt="">
+          <span class="name">Andrei C. Pia </span>
+          <span class="motto">"Luluhod sa munggo, wag lamang ma kwatro."</span>
+        </section>
+        <section class="membersParent">
+          <img src="Images/santigao.jpg" alt="">
+          <span class="name">Ma. Angelie T. Santiag</span>
+          <span class="motto">Luluhod sa munggo, wag lamang ma kwatro.</span>
+        </section>
+     
+      </div>
     </main>
 
-
-
-
-
-
-
-</div>
-
-</head>
-<body>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script>
 
 
 $(document).ready(function(){
+
+  $('.membersParent').addClass('reveal');
+  $('.damembers').addClass('bulaga');
 
     
     $(".mathDropdown").hide();
@@ -92,7 +127,13 @@ $(document).ready(function(){
   });
 
   $("#bars").click(function(){
-    $("nav").fadeToggle("fast");
+    var nav = $("nav");
+
+if (nav.hasClass("navshow")) {
+    nav.removeClass("navshow");
+} else {
+    nav.addClass("navshow");
+}
 
   });
 
@@ -103,14 +144,19 @@ $(document).ready(function(){
   function checkWidth() {
     var element = $('nav');
     if ($(window).width() < 670) {
-      element.hide();   
+      element.addClass('navhide');   
+
+      $(".mainParent").click(function(){
+        $("nav").removeClass('navshow');
+        console.log("pogi");
+    })
       
       
   
 
     } else {
-      element.css('display', 'flex'); // or 'inline', 'inline-block', etc., based on your needs
- 
+      
+        console.log("fck u");
 
 
     }

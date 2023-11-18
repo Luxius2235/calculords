@@ -57,7 +57,7 @@
         <li><i class="fa-solid fa-video fa-xl" ></i> Video</li>
         <li onclick="location.href='comment.html'"><i class="fa-solid fa-comment fa-xl" ></i> Comment</li>
         <li onclick="location.href='members.html'"><i class="fa-solid fa-person fa-xl"> </i> About us</li>
-        <li><i class="fa-brands fa-sourcetree fa-xl" ></i> References</li>
+        <li onclick="location.href='references.html'"><i class="fa-brands fa-sourcetree fa-xl" ></i> References</li>
         <li><i class="fa-solid fa-right-from-bracket fa-xl"></i> Log out</li>
 
        </ul>
@@ -74,7 +74,7 @@
       
     
         <div class="contentParent">
-            <img class="left" id="frontimage" src="Images/gauss.jpg" alt="I'm GAUSS">
+            <img class="left gaussimg" id="frontimage" src="Images/gauss.jpg" alt="I'm GAUSS">
             <div class="parentTitle right">
                 <p id="title1">GAUSS:</p>
                 <p id="title2">The greatest Mathematician since Antiquity</p>
@@ -260,9 +260,9 @@ astronomer Joseph Piazzi discovered the planetoid Ceres. However, he could only 
 <script>
 
     $(document).ready(function(){  
-
+        $('.mainParent').addClass('revealme');
+        $('.gaussimg').addClass('gauss');
        
-
         $(".highlighter").click(function(){
             $(".i").toggleClass("blue");
             console.log("gumana");
@@ -402,7 +402,7 @@ if (nav.hasClass("navshow")) {
       element.addClass('navhide');   
 
       $(".mainParent").click(function(){
-        $(".nav").removeClass('navshow');
+        $("nav").removeClass('navshow');
         console.log("pogi");
     })
       

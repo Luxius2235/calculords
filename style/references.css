@@ -1,0 +1,68 @@
+body{
+    background-color: black;
+}
+
+.navhide{
+    margin-left: -1000px;
+    transition: all 0.5s;
+
+
+  }
+
+  .navshow{
+    margin-left: 0;
+    transition: all 0.5s;
+    
+
+  }
+
+
+  .mainParent{
+    background-color: black;
+    width: auto;
+    text-align: center;
+    padding-top:4rem;
+    border: solid white;
+  }
+
+
+
+  .ref{
+    color: black;
+    border-bottom: solid 1px;
+    padding: 10px;
+    width: 95%;
+    transition: all 2s;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
+  }
+
+  .bulaga{
+    color:white;
+}
+  
+
+p{
+    color: black;
+    text-align: left;
+    word-wrap: break-word;
+    line-height: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1rem;
+   font-size: medium;
+    transition: all 2s;
+    
+}
+
+.p {
+    color: white;
+}
+
+a{
+    color: white;
+}
+@media  screen and (max-width:670px) {
+    p {
+        font-size: small;
+    }
+}

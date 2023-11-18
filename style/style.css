@@ -75,7 +75,20 @@
     flex-direction: column;
     padding-left: 20rem;
     padding-top: 5rem;
-    
+   background-color: white;
+   color: white;
+}
+
+.revealme{
+    color: black;
+}
+
+.gaussimg{
+    border: solid rgba(0, 0, 0, 0) 2rem;
+}
+
+.gauss{
+   border: solid black 1px;
 }
 
 .nav{
@@ -301,6 +314,7 @@ nav>ul>li:hover{
     margin-top: 5rem;
     padding-right: 4rem;
     width: 90%;
+
  
 }
 
@@ -319,37 +333,28 @@ nav>ul>li:hover{
     line-height:150%;
 }
 
-.left {
 
+
+
+.left, .right, .introduction {
     transition: all 1.5s; /* Corrected from '2S' to '2s' */
-
   }
   
-  .right {
-
-   
-    transition: all 1.5s; /* Corrected from '2S' to '2s' */
-
-  }
-
-  .introduction {
-
-    transition: all 1.5s; /* Corrected from '2S' to '2s' */
-  }
-
-  .nav, .nav-dark, .topBar, .topBar-dark, .mainParent{
+  .topBar, .topBar-dark, .mainParent{
     transition: all 1s; /* Corrected from '2S' to '2s' */
   }
 
   .navhide{
     margin-left: -1000px;
-    transition:all 0.5s;
+    transition: all 0.5s;
+
+
   }
 
   .navshow{
     margin-left: 0;
-    transition:all 0.5s;
-    display: flex;
+    transition: all 0.5s;
+
   }
 
   
